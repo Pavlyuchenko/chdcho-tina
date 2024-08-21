@@ -1,18 +1,19 @@
 {
-  "name": "quickstart",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tinacms": "^2.2.0"
-  },
-  "devDependencies": {
-    "@tinacms/cli": "^1.6.0"
-  }
+    "name": "quickstart",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tinacms dev -c \"hugo server -D\"",
+        "build": "tinacms build && hugo"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "tinacms": "^2.2.0"
+    },
+    "devDependencies": {
+        "@tinacms/cli": "^1.6.0"
+    }
 }
