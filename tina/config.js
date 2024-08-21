@@ -1,0 +1,71 @@
+import { defineConfig } from "tinacms";
+
+const branch =
+    process.env.GITHUB_BRANCH ||
+    process.env.VERCEL_GIT_COMMIT_REF ||
+    process.env.HEAD ||
+    "main";
+
+export default defineConfig({
+    branch,
+    clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+    token: process.env.TINA_TOKEN,
+    build: {
+        outputFolder: "admin",
+        publicFolder: "static",
+    },
+    media: {
+        tina: {
+            mediaRoot: "",
+            publicFolder: "static",
+        },
+    },
+    schema: {
+        collections: [
+            {
+                name: "stranky",
+                label: "Stránky",
+                path: "content/pages",
+                fields: [
+                    {
+                        type: "string",
+                        name: "nadpis",
+                        label: "nadpis",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "podnadpis",
+                        label: "podnadpis",
+                    },
+                    {
+                        type: "image",
+                        name: "heroImage",
+                        label: "Hero Image",
+                    },
+                ],
+            },
+            {
+                name: "post",
+                label: "Posts",
+                path: "content/posts",
+                fields: [
+                    {
+                        type: "string",
+                        name: "title",
+                        label: "Title",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "rich-text",
+                        name: "body",
+                        label: "Body",
+                        isBody: true,
+                    },
+                ],
+            },
+        ],
+    },
+});

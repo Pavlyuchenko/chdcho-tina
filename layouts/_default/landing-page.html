@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ .Params.headline }}</title>
+    </head>
+    <body>
+        <header>
+            <h1>{{ .Params.headline }}</h1>
+            <h2>{{ .Params.subheadline }}</h2>
+            <img src="{{ .Params.heroImage }}" alt="Hero Image" />
+        </header>
+        <main>
+            <p>{{ .Params.bodyText }}</p>
+            <button>{{ .Params.ctaButton }}</button>
+        </main>
+    </body>
+</html>
