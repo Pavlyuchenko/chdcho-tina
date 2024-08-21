@@ -10,9 +10,10 @@ export default defineConfig({
     branch,
     clientId: "13445a62-7ba5-4038-aa9e-6bb0cbf9cc03",
     token: "8eb9858d0220c18f50d6e209572ff6581468033c",
+    apiURL: `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`, // Set up the apiURL
     build: {
+        publicFolder: "public",
         outputFolder: "admin",
-        publicFolder: "static",
     },
     media: {
         tina: {
