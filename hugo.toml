@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke'
+baseURL = "https://chdcho-tina.vercel.app/"
+languageCode = "cs-cz"
+title = "My Hugo Site with TinaCMS"
+theme = "Ananke Gohugo Theme"
